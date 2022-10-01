@@ -1,18 +1,16 @@
-def fizzbuzz
-  num = 1
-  num_max = 100
-  while num <= num_max
+num_max = 100
+# numが1~100まで繰り返し実行
+(1..num_max).each do |num|
+  def fizzbuzz(num)
     if num % 3 == 0 && num % 5 == 0
-      puts 'FizzBuzz'
+      return 'FizzBuzz'
     elsif num % 3 == 0
-      puts 'Fizz'
+      return 'Fizz'
     elsif num % 5 == 0 
-      puts 'Buzz'
+      return 'Buzz'
     else 
-      puts num
+      return num
     end
-    num += 1
   end
+  puts fizzbuzz(num)
 end
-
-puts fizzbuzz()
